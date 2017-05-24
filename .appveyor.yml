@@ -6,4 +6,4 @@ build_script:
   - cmd: make compile
   - cmd: rmdir /s /q .git
 test_script:
-  - cmd: make --ignore-errors test
+  - cmd: make --keep-going test

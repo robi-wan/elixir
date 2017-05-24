@@ -1,7 +1,9 @@
 version: 1-{branch}+{build}
 
+init:
+  - SET PATH=C:\MinGW\msys\1.0\bin\;%PATH%
 build_script:
-  - cmd: C:\MinGW\msys\1.0\bin\make
+  - cmd: make compile
   - cmd: rmdir /s /q .git
 test_script:
-  - cmd: C:\MinGW\msys\1.0\bin\make test
+  - cmd: make --ignore-errors test
